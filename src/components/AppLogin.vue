@@ -1,11 +1,11 @@
 <template>
-  <div>logiin works</div>
+  <div>logiin works<font-awesome-icon icon="fa-solid fa-user-doctor-hair" /></div>
 </template>
 
 <script>
 export default {
- name:'AppLogin'
-}
+  name: "AppLogin",
+};
 </script>
 
 <style>

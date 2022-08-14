@@ -1,25 +1,22 @@
 <template>
-<div>
-<AppHome />
-<router-view></router-view>
-
-</div>
-  
+  <div>
+    <!-- <AppHome /> -->
+    <AppMenu />
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import AppHome from './components/AppHome.vue'
-
+// import AppHome from './components/AppHome.vue'
+import AppMenu from "./components/AppMenu.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    AppHome
-  
-  }
-}
+    // AppHome
+    AppMenu,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
