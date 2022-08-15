@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light shadow p-3 mb-5 ">
+  <nav class="navbar navbar-expand-lg navbar-light shadow p-3 mb-5">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tutor Module</a>
+      <a class="navbar-brand" href="/">Tutor Module</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -16,13 +16,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link bg-hover" href="#">Programs</a>
+            <a class="nav-link bg-hover" href="/programs">Programs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link bg-hover" href="#">Assignments</a>
+            <a class="nav-link bg-hover" href="/assignments">Assignments</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link bg-hover" href="#">Students</a>
+            <a class="nav-link bg-hover" href="/students">Students</a>
           </li>
           <li class="nav-item">
             <a class="nav-link">Welcome <span>Puranik Prashant</span></a>
@@ -49,20 +49,19 @@ export default {
 }
 .navbar {
   /* background-color: #02457a; */
- background-color:#001b48; 
+  background-color: #001b48;
 }
 .navbar-brand {
   color: #97cadb;
   font-weight: bold;
   letter-spacing: 0.1em;
 }
-span{
+span {
   color: #54c0cc;
 }
 
-.nav-link{
+.nav-link {
   color: #d6e8ee;
-
 }
 .bg-hover:hover {
   color: white;
