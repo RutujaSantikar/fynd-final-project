@@ -25,14 +25,15 @@
             <li class="nav-item">
               <a class="nav-link bg-hover" href="/students">Students</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item right">
               <a class="nav-link">Welcome <span><i class="fa-solid fa-chalkboard-user"></i> PuranikPrashant</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item right">
               <a class="nav-link bg-hover" href="#">Logout</a>
             </li>
           </ul>
+          
         </div>
       </div>
     </nav>

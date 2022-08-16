@@ -1,7 +1,9 @@
 import Router from "vue-router";
 import AppHome from "../components/AppHome";
 import AppPrograms from "../components/AppPrograms";
+import CreateProgram from "../components/CreateProgram";
 import AppAssignment from "../components/AppAssignment";
+import CreateAssignment from "../components/CreateAssignment"
 import AppStudents from "../components/AppStudents";
 import AppLogin from "../components/AppLogin";
 const router = new Router({
@@ -16,11 +18,23 @@ const router = new Router({
       name: "programs",
       path: "/programs",
       component: AppPrograms,
+      
+    },
+    {
+      name: "createprogram",
+      path: "/programs/createprogram",
+      component: CreateProgram,
+      
     },
     {
       name: "assignments",
       path: "/assignments",
       component: AppAssignment,
+    },
+    {
+      name: "assignments",
+      path: "/assignments/createassignments",
+      component: CreateAssignment,
     },
     {
       name: "students",

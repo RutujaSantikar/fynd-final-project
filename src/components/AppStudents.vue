@@ -28,7 +28,7 @@ h5{
   border-radius: 2em;
 }
  .students-container{
-  width: 60%;
+  width: 80%;
   margin: 1em auto;
  }
 </style>
