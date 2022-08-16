@@ -12,6 +12,7 @@ import AppMenu from "./components/AppMenu.vue";
 
 export default {
   name: "App",
+ 
   components: {
     // AppHome
     AppMenu,
