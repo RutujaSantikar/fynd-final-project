@@ -26,7 +26,7 @@
               <a class="nav-link bg-hover" href="/students">Students</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Welcome <span>Puranik Prashant</span></a>
+              <a class="nav-link">Welcome <span><i class="fa-solid fa-chalkboard-user"></i> PuranikPrashant</span></a>
             </li>
 
             <li class="nav-item">
@@ -46,9 +46,10 @@ export default {
 </script>
 
 <style scoped>
-* {
+body {
   font-family: "Tajawal", sans-serif;
 }
+
 .navbar {
   /* background-color: #02457a; */
   background-color: #001b48;

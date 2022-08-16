@@ -5,9 +5,10 @@
       type="submit"
       class="btn-create-program"
       id="createBtn"
-    >
+    ><i class="fa-solid fa-plus"></i>
       Create Program
     </button>
+    <div>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
         
@@ -18,6 +19,8 @@
         </div>
         <div class="description program-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reiciendis ipsum similique veritatis corrupti quas hic ad dignissimos est dolorum nemo doloremque modi asperiores itaque beatae, fugiat inventore quia dolores.</div>
       </div>
+    </div>
+      
       <div class="create-program-container">
         <div class="create-program-card">
         
@@ -58,6 +61,7 @@ export default {
   border: none;
   margin-left: 10em;
 }
+
 .card-body{
     background-color: #018abe;
     border-top-right-radius: 5px;

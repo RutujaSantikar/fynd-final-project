@@ -28,10 +28,11 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Tajawal", sans-serif;
+  
 }
 body{
 background-color:lightgray;
+font-family: "Tajawal", sans-serif;
 }
 p {
   color: #4b91a9;

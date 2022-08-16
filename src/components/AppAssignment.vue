@@ -4,9 +4,38 @@
       type="submit"
       class="btn-create-assignment"
       id="create-assignment-btn"
-    >
+    ><i class="fa-solid fa-plus"></i>
       Create Assignment
     </button>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Assignment no 1
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>Instructions:</strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel debitis ullam laboriosam numquam veniam vero odio, doloremque cumque illo eum similique, in repellendus nesciunt esse, fugit suscipit fugiat sed voluptatibus assumenda omnis quaerat! Odit excepturi minima error voluptatum enim ea!
+            <div><strong>Due Date:</strong>19-08-2022</div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+  
     <div class="create-assignment-container">
       <div class="create-assignment-card">
         <form
@@ -89,5 +118,9 @@ textarea {
   padding: 0.9em;
   margin-top: 0.4em;
   width: 100%;
+}
+.accordion{
+  width:60%;
+  margin:1em auto;
 }
 </style>
