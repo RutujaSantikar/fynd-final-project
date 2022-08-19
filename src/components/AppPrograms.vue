@@ -143,6 +143,7 @@ export default {
 * {
   font-family: "Tajawal", sans-serif;
 }
+
 a {
   text-decoration: none;
   color: white;
@@ -154,6 +155,7 @@ a {
   border-radius: 0.4em;
   border: none;
   margin-left: 10em;
+  
 }
 
 .card-body {
@@ -171,5 +173,14 @@ a {
   margin-top: 1.9em;
 
 }
+@media (max-width:525px){
+  
+ 
 
+  .btn-create-program {
+  padding: 0.7em;
+  margin-left: 5em;
+  }
+  
+}
 </style>

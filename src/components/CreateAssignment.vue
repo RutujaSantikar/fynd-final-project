@@ -71,5 +71,11 @@ textarea {
   margin-top: 0.4em;
   width: 100%;
 }
+@media (max-width: 525px) {
+  .create-assignment-container {
+    width: 80%;
+    margin: 2em auto;
+  }
+}
 
 </style>

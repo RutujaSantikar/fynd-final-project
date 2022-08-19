@@ -1,32 +1,44 @@
 <template>
-   <div class="create-program-container">
-        <div class="create-program-card">
-        
-          <form action="" id="createProgramForm" class="create-program-form">
-            <div><label for="programName">Program Name</label></div>
-            <input type="text" name="programName" id="program-Name" placeholder="ex.MEVN stack"/>
-            <div><label for="programDes">Description</label></div>
-            <textarea name="programDescription" id="program-Description" cols="30" rows="2" placeholder="Short description about program"></textarea>
-           
-            
-            
-            <div><label for="text">Teacher Name</label></div>
-            <input type="text" name="teacherName" id="teacher-Name" placeholder="ex.Puranik Prashant"/>
-            <div><button type="submit" class="create-btn">Create</button></div>
-          </form>
-        </div>
-      </div>
+  <div class="create-program-container">
+    <div class="create-program-card">
+      <form action="" id="createProgramForm" class="create-program-form">
+        <div><label for="programName">Program Name</label></div>
+        <input
+          type="text"
+          name="programName"
+          id="program-Name"
+          placeholder="ex.MEVN stack"
+        />
+        <div><label for="programDes">Description</label></div>
+        <textarea
+          name="programDescription"
+          id="program-Description"
+          cols="30"
+          rows="2"
+          placeholder="Short description about program"
+        ></textarea>
+
+        <div><label for="text">Teacher Name</label></div>
+        <input
+          type="text"
+          name="teacherName"
+          id="teacher-Name"
+          placeholder="ex.Puranik Prashant"
+        />
+        <div><button type="submit" class="create-btn">Create</button></div>
+      </form>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name:"CreateProgram"
-
-}
+  name: "CreateProgram",
+};
 </script>
 
 <style scoped>
- *{
+* {
   font-family: "Tajawal", sans-serif;
 }
 .create-program-container {
@@ -68,5 +80,11 @@ textarea {
   padding: 0.9em;
   margin-top: 0.4em;
   width: 100%;
+}
+@media (max-width: 525px) {
+  .create-program-container {
+    width: 80%;
+    margin: 2em auto;
+  }
 }
 </style>

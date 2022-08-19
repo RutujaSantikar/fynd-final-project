@@ -9,7 +9,10 @@
         >Tutor Module</b-navbar-brand
       >
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle
+        class="navbar-toggler"
+        target="nav-collapse"
+      ></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
@@ -52,6 +55,7 @@ body {
 .bg-info {
   background-color: #001b48 !important;
 }
+
 .navbar-brand {
   color: #97cadb;
   font-weight: bold;
@@ -72,7 +76,12 @@ span {
 .bg-logout {
   background-color: #54c0cc;
 }
-.navbar-toggler-icon{
-  color: white !important`;
+.navbar-toggler {
+  background-color: #97cadb;
+}
+@media (max-width: 525px) {
+  .navbar-toggler {
+    font-size: 0.9em;
+  }
 }
 </style>
