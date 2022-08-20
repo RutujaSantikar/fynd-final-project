@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <div class="login-container">
-      <div class="login-card">
-        <form action="" id="login-form" class="user-login-form">
+  <div class=" register-container">
+      <div class="register-card">
+      
+        <form action="" id="register-form" class=" user-register-form">
+          <div><label for="firstName">Name</label></div>
+          <input type="name" name="userFirstName" id="userFirstName"/>
           <div><label for="email">Email</label></div>
-          <input type="email" name="userEmail" id="useremail" />
+          <input type="email" name="userEmail" id="useremail"/>
           <div><label for="password">Password</label></div>
           <input type="password" name="userPassword" id="userpassword" />
-          <div><button type="submit" class="login-btn">Login</button></div>
-          <p class="center">Need an account <a href="/register">Register Here</a></p>
+          <div><label for="ConfirmPassword">Confirm Password</label></div>
+          <input type="password" name="userConfirmPassword" id="userConfirmPassword">
+          <div><button type="submit" class="register-btn">Register</button></div>
         </form>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: "AppLogin",
-};
+    name:'AppRegister'
+
+}
 </script>
 
 <style scoped>
@@ -26,11 +29,11 @@ body {
   background-color: lightgray;
   font-family: "Tajawal", sans-serif;
 }
-.login-container {
+.register-container {
   width: 30%;
   margin: 5em auto;
 }
-.login-card {
+.register-card {
   background-color: white;
   box-shadow: 2px 2px 5px 2px lightslategrey;
 
@@ -44,15 +47,15 @@ input {
   outline-style: none;
   border: 1px solid lightgray;
 }
-.user-login-form {
+.user-register-form {
   color: #001b48;
   font-weight: 530;
   padding: 2em;
 }
-.user-login-form div {
+.user-register-form div {
   margin: 0.8em 0em;
 }
-.login-btn {
+.register-btn {
   background-image: linear-gradient(
     to right top,
     #001b48,
@@ -83,7 +86,7 @@ input {
 }
 
 @media (max-width: 525px) {
-  .login-container {
+  .register-container {
     width: 50%;
     margin: 12em auto;
   }
@@ -91,14 +94,14 @@ input {
     width: 100%;
     padding: 0.3em;
   }
-  .user-login-form {
+  .user-register-form {
     font-weight: 500;
     padding: 1.8em;
   }
-  .user-login-form div {
+  .user-register-form div {
     margin: 0.6em 0em;
   }
-  .login-btn {
+  .register-btn {
     background-image: linear-gradient(
       to right top,
       #001b48,
@@ -126,4 +129,3 @@ input {
   }
 }
 </style>
-

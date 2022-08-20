@@ -6,6 +6,7 @@ import AppAssignment from "../components/AppAssignment";
 import CreateAssignment from "../components/CreateAssignment"
 import AppStudents from "../components/AppStudents";
 import AppLogin from "../components/AppLogin";
+import AppRegister from "../components/AppRegister"
 const router = new Router({
   mode: "history",
   routes: [
@@ -46,6 +47,11 @@ const router = new Router({
       name: "login",
       path: "/login",
       component: AppLogin,
+    },
+    {
+      name: "register",
+      path: "/register",
+      component: AppRegister,
     },
   ],
 });

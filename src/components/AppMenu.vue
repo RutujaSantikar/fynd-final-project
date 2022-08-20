@@ -5,7 +5,7 @@
       toggleable="lg"
       variant="info"
     >
-      <b-navbar-brand class="navbar-brand" href="/"
+      <b-navbar-brand class="navbar-brand" href=""
         >Tutor Module</b-navbar-brand
       >
 

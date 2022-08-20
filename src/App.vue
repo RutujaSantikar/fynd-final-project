@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <AppHome /> -->
+
     <AppMenu />
     <router-view></router-view>
   </div>
@@ -14,7 +14,7 @@ export default {
   name: "App",
  
   components: {
-    // AppHome
+    // AppHome,
     AppMenu,
   },
 };
