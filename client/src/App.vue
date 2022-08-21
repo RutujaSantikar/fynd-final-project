@@ -2,6 +2,7 @@
   <div>
 
     <AppMenu />
+    
     <router-view></router-view>
   </div>
 </template>
