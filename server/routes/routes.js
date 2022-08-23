@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const API = require("../controllers/api");
 
-router.get("/", (req, res) => {
-  res.send("hello world");
-});
+router.get("/", API.fetchAllProgram);
+router.get("/:id", API.fetchProgramByID);
+router.post("/", API.createProgram);
 
-module.exports=router;
+module.exports = router;

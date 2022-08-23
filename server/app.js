@@ -4,12 +4,11 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("uploads"));
 
 mongoose
   .connect(process.env.DB_URI, {
@@ -18,11 +17,11 @@ mongoose
     useFindAndModify: true,
     useCreateIndex: true,
   })
-  .then(() => console.log("connected to the database!"))
+  .then(() => console.log("connected to database !!"))
   .catch((err) => console.log(err));
 
 app.use("/api/programs", require("./routes/routes"));
 
 app.listen(port, () =>
-  console.log(`server running at 'http://localhost:${port}`)
+  console.log(`server has running at http://localhost:${port}`)
 );

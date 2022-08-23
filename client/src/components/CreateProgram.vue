@@ -18,7 +18,7 @@
           placeholder="Short description about program"
         ></textarea>
 
-        <div><label for="text">Teacher Name</label></div>
+        <div><label for="teacherName">Teacher Name</label></div>
         <input
           type="text"
           name="teacherName"
