@@ -1,13 +1,22 @@
 <template>
   <div class="create-program-container">
     <div class="create-program-card">
-      <form action="" id="createProgramForm" class="create-program-form">
+      <form
+        action=""
+        @submit.prevent="submitForm"
+        id="createProgramForm"
+        class="create-program-form"
+        enctype="multipart/x-www-form-urlencoded"
+        ref="form"
+      >
         <div><label for="programName">Program Name</label></div>
         <input
           type="text"
           name="programName"
           id="program-Name"
           placeholder="ex.MEVN stack"
+      
+          v-model="program.program"
         />
         <div><label for="programDes">Description</label></div>
         <textarea
@@ -15,7 +24,9 @@
           id="program-Description"
           cols="30"
           rows="2"
-          placeholder="Short description about program"
+          placeholder="Short description about program..."
+      
+          v-model="program.description"
         ></textarea>
 
         <div><label for="teacherName">Teacher Name</label></div>
@@ -24,6 +35,8 @@
           name="teacherName"
           id="teacher-Name"
           placeholder="ex.Puranik Prashant"
+    
+          v-model="program.teacher"
         />
         <div><button type="submit" class="create-btn">Create</button></div>
       </form>
@@ -32,8 +45,34 @@
 </template>
 
 <script>
+import API from "../api";
 export default {
   name: "CreateProgram",
+  data() {
+    return {
+      program: {
+        program: "",
+        description: "",
+        teacher: "",
+      },
+    };
+  },
+  
+  methods: {
+    async submitForm() {
+      const formData = new FormData();
+      formData.append("program", this.program.program);
+      formData.append("description", this.program.description);
+      formData.append("teacher", this.program.teacher);
+      if (this.$ref.form.validate()) {
+        const response = await API.addProgram(formData);
+        this.$router.push({
+          name: "programs",
+          params: { message: response.message },
+        });
+      }
+    },
+  },
 };
 </script>
 

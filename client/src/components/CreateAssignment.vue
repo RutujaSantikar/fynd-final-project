@@ -16,7 +16,7 @@
             rows="2"
           ></textarea>
           <div><label for="due-date">Due Date</label></div>
-          <input type="date" name="dueDate" id="dueDate" />
+           <input type="text" name="dueDate" id="dueDate" />
           <div><button type="submit" class="create-btn">Create</button></div>
         </form>
       </div>

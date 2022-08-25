@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -21,6 +21,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/api/programs", require("./routes/routes"));
+app.use("/api/assignments", require("./routes/assignment.routes"));
 
 app.listen(port, () =>
   console.log(`server has running at http://localhost:${port}`)

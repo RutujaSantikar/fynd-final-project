@@ -9,7 +9,15 @@ module.exports = class API {
       res.status(404).json({ message: err.message });
     }
   }
-  static async fetchProgramByID(req, res) {}
+  static async fetchProgramByID(req, res) {
+    const id = req.params.id;
+    try {
+      const program = await Program.findById(id);
+      res.status(200).json(program);
+    } catch (err) {
+      res.status(404).json({ message: err.message });
+    }
+  }
   static async createProgram(req, res) {
     const program = req.body;
     try {
