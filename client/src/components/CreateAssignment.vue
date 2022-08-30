@@ -1,38 +1,79 @@
 <template>
   <div class="create-assignment-container">
-      <div class="create-assignment-card">
-        <form
-          action=""
-          id="createAssignmentForm"
-          class="create-assignment-form"
-        >
-          <div><label for="assignmentName">Title</label></div>
-          <input type="text" name="assignmentName" id="assignment-Name" />
-          <div><label for="instructions">Instructions</label></div>
-          <textarea
-            name="assignInstructions"
-            id="assignment-instructions"
-            cols="30"
-            rows="2"
-          ></textarea>
-          <div><label for="due-date">Due Date</label></div>
-           <input type="text" name="dueDate" id="dueDate" />
-          <div><button type="submit" class="create-btn">Create</button></div>
-        </form>
-      </div>
+    <div class="create-assignment-card">
+      <form
+        action=""
+        v-on:submit.prevent="submitForm"
+        id="createAssignmentForm"
+        class="create-assignment-form"
+        ref="form"
+      >
+        <div><label for="assignmentName">Title</label></div>
+        <input
+          type="text"
+          v-model="assignment.title"
+          name="assignmentName"
+          id="assignment-Name"
+        />
+        <div><label for="instructions">Instructions</label></div>
+        <textarea
+          name="assignInstructions"
+          v-model="assignment.instructions"
+          id="assignment-instructions"
+          cols="30"
+          rows="2"
+        ></textarea>
+        
+        <div><label for="due-date">Due Date</label></div>
+        <input
+          type="text"
+          name="dueDate"
+          v-model="assignment.dueDate"
+          id="dueDate"
+        />
+        
+        <div><button type="submit" class="create-btn">Create</button></div>
+      </form>
     </div>
+  </div>
 </template>
 
 <script>
+import API from "../assignments.api";
 export default {
-    name:"CreateAssignment"
+  name: "CreateAssignment",
 
-}
+  data() {
+    return {
+      assignment: {
+        title: "",
+        instructions: "",
+        dueDate: "",
+      },
+    };
+  },
+
+  methods: {
+    async submitForm() {
+      const formData = new FormData();
+      formData.append("title", this.assignment.title);
+      formData.append("instructions", this.assignment.instructions);
+      formData.append("dueDate", this.assignment.dueDate);
+      if (this.$ref.form.validate()) {
+        const response = await API.addAssignment(formData);
+        this.$router.push({
+          name: "assignments",
+          params: { message: response.message },
+        });
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
-*{
-    font-family: "Tajawal",sans-serif;
+* {
+  font-family: "Tajawal", sans-serif;
 }
 .create-assignment-container {
   width: 40%;
@@ -61,7 +102,6 @@ textarea {
   margin: 0.8em 0em;
 }
 .create-btn {
-  
   background-color: #002d40;
   border: none;
   border-radius: 15px;
@@ -77,5 +117,4 @@ textarea {
     margin: 2em auto;
   }
 }
-
 </style>

@@ -1,27 +1,57 @@
 <template>
-  <div class=" register-container">
-      <div class="register-card">
-      
-        <form action="" id="register-form" class=" user-register-form">
-          <div><label for="firstName">Name</label></div>
-          <input type="name" name="userFirstName" id="userFirstName"/>
-          <div><label for="email">Email</label></div>
-          <input type="email" name="userEmail" id="useremail"/>
-          <div><label for="password">Password</label></div>
-          <input type="password" name="userPassword" id="userpassword" />
-          <div><label for="ConfirmPassword">Confirm Password</label></div>
-          <input type="password" name="userConfirmPassword" id="userConfirmPassword">
-          <div><button type="submit" class="register-btn">Register</button></div>
-        </form>
-      </div>
+  <div class="register-container">
+    <div class="register-card">
+      <form action="" id="register-form" class="user-register-form">
+        <div><label for="name">Name</label></div>
+        <input type="name" v-model="name" name="name" id="usersName" />
+        <div><label for="email">Email</label></div>
+        <input type="email" v-model="emailID" name="userEmail" id="useremail" />
+        <div><label for="password">Password</label></div>
+        <input
+          type="password"
+          v-model="password"
+          name="userPassword"
+          id="userpassword"
+        />
+        <div><label for="ConfirmPassword">Confirm Password</label></div>
+        <input
+          type="password"
+          v-model="cpassword"
+          name="cpassword"
+          id="userConfirmPassword"
+        />
+        <div>
+          <button type="submit" class="register-btn" v-on:click="reg()">
+            Register
+          </button>
+        </div>
+      </form>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name:'AppRegister'
+  name: "AppRegister",
+  data(){
+    return{
+      name:"",
+      email:"",
+      password:"",
+      cpassword:"",
+    }
+   },
 
-}
+   methods:{
+    reg(){
+      const formData = new FormData();
+      formData.append("name",this.name);
+      formData.append("email",this.email);
+      formData.append("password",this.password);
+      formData.append("cpassword",this.cpassword);
+    }
+   }
+};
 </script>
 
 <style scoped>
@@ -81,7 +111,7 @@ input {
   margin-top: 0.4em;
   width: 100%;
 }
-.center{
+.center {
   text-align: center;
 }
 
